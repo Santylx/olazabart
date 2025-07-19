@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['olazabart.vercel.app'], // si usas imágenes externas
+    unoptimized: true, // evita errores si usas <img src="/slide1.jpg" />
   },
 };
 
