@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica', sans-serif, 'Lexend';
+  height: 100%;
+  width: 100%;
+}
+
+/* Estilo para slideshow */
+.slideshow {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 3s ease-in-out;
+}
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* Estilo del header general */
+.site-header {
+  position: absolute;
+  top: 0; /* para que quede más arriba */
+  left: 0;
+  width: 100%;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  background: none !important;
+  box-shadow: none !important;
+  z-index: 1000;
+}
+
+/* Estilo solo cuando el header debe ser fijo en scroll (páginas internas) */
+.sticky-header {
+  position: sticky !important;
+  top: 0; /* para que quede más arriba */
+  background-color: white !important; /* Fondo blanco sólido */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  z-index: 1000;
+}
+
+/* Otros elementos del header */
+.header-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.logo {
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1010;
+  flex-shrink: 0;
+}
+.site-title {
+  color: rgba(255, 0, 0, 1);
+  font-size: 1.5rem;
+  font-weight: medium;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  user-select: none;
+  white-space: nowrap;
+  pointer-events: none;
+}
+.nav-menu {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.nav-menu a {
+  color: rgb(153, 153, 153);
+  text-decoration: none;
+  user-select: none;
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover {
+  color: #ff0000;
+  text-decoration: underline;
+  cursor: pointer;
+}
