@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone',
+  reactStrictMode: true,
+  images: {
+    domains: ['olazabart.vercel.app'], // si usas imágenes externas
+  },
 };
 
 module.exports = nextConfig;
