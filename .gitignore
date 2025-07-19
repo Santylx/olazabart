@@ -1,20 +1,7 @@
-# Evitar subir dependencias
-node_modules/
-
-# Evitar subir archivos de producción de Next.js
-.next/
-
-# Archivos de configuración local
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# Logs del sistema
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# Editor y sistema
+.next
+node_modules
+.env
+*.log
 .DS_Store
+out/
 .vscode/
